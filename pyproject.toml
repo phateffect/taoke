@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "taoke"
+version = "0.1.0"
+description = ""
+authors = ["ShiWei <shiwei@leyantech.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+click = "^8.1.7"
+scenedetect = {extras = ["opencv"], version = "^0.6.2"}
+pydantic = "^2.6.1"
+jinja2 = "^3.1.3"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.2.2"
+
+[tool.poetry.scripts]
+mig25 = "taoke.commands:cli"
+
+[[tool.poetry.source]]
+name = "tuna"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+priority = "default"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
